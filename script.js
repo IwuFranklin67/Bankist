@@ -360,7 +360,7 @@ document
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%'; //  These styles are actually set as inline styles, so styles set directly here in the DOM.
 
-console.log(message.style.height);
+console.log(message.style.height); // This won't work because I didn't set the height property myself
 console.log(message.style.backgroundColor); // Using the style property like this here only works for inline styles that we set ourselves also using this style property.
 
 console.log(getComputedStyle(message).color);
@@ -479,7 +479,7 @@ console.log(h1.parentElement);
 
 h1.closest('header').style.background = 'var(--gradient-secondary)';
 
-h1.closest('h1').style.background = 'var(--gradient-primary)'; // querySelector, finds children, no matter how deep in the Dom tree, while the closest method finds parents no matter how far up in the Dom tree.
+h1.closest('h1').style.background = 'var(--gradient-primary)'; // querySelector, finds children, no matter how deep in the Dom tree, while the closest method finds parents no matter how far UP in the Dom tree.
 
 // Going sideways: siblings
 console.log(h1.previousElementSibling);
@@ -496,7 +496,7 @@ console.log(h1.parentElement.children);
 
 ///////////////////////////////////////
 // Sticky Navigation
-/*
+// /*
 const initialCoords = section1.getBoundingClientRect();
 console.log(initialCoords);
 
@@ -506,7 +506,7 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 }); // using scroll event for performing a certain action at a certain position of the page is bad for perfomance because the scroll event here fires all the time, no matter how small the change is here in the scroll.
-*/
+// */
 
 ///////////////////////////////////////
 // Sticky Navigation: The Intersection Observer API
