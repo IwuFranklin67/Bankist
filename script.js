@@ -496,7 +496,7 @@ console.log(h1.parentElement.children);
 
 ///////////////////////////////////////
 // Sticky Navigation
-// /*
+/*
 const initialCoords = section1.getBoundingClientRect();
 console.log(initialCoords);
 
@@ -506,12 +506,12 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 }); // using scroll event for performing a certain action at a certain position of the page is bad for perfomance because the scroll event here fires all the time, no matter how small the change is here in the scroll.
-// */
+*/
 
 ///////////////////////////////////////
 // Sticky Navigation: The Intersection Observer API
 // This API allows our code to basically observe changes to the way that a certain target element intersects another element, or the way it intersects the viewport.
-/*
+// /*
 const obsCallback = function (entries, observer) {
   entries.forEach(entry => {
     console.log(entry);
@@ -525,7 +525,7 @@ const obsOptions = {
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1); // this here section1 is the target, and the root element will be the element that we want our target element to intersect. Whenever the first section, so our target here, is intersecting the viewport at 10%, so the viewport, because that's the root, and 10% because that's the threshold. So whenever that happens, then the function obsCallback will get called and that's no matter if we are scrolling up or down
-*/
+// */
 
 ///////////////////////////////////////
 // Lifecycle DOM Events
