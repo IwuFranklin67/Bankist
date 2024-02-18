@@ -111,7 +111,7 @@ tabsContainer.addEventListener('click', function (e) {
   // console.log(clicked);
 
   // Guard clause
-  if (!clicked) return; // when we have null which is a faulty value, then not faulty will become true and then the function will return and none of the code that's after it will be executed. This is called a guard clause
+  if (!clicked) return; // when we have null which is a falsy value, then not falsy will become true and then the function will return and none of the code that's after it will be executed. This is called a guard clause
 
   // Remove active classes
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
