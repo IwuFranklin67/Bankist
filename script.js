@@ -42,18 +42,18 @@ document.addEventListener('keydown', function (e) {
 // Button scrolling
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+  // console.log(s1coords);
 
-  console.log(e.target.getBoundingClientRect());
+  // console.log(e.target.getBoundingClientRect());
 
-  console.log('Current scroll (K/Y)', window.pageXOffset, window.pageYOffset);
+  // console.log('Current scroll (K/Y)', window.pageXOffset, window.pageYOffset);
 
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-    // these client height and width here are not counting with the scroll bars. It's dusty dimensions of the view port, that are actually available for the content. And of course that excludes any scroll bars.
-  );
+  // console.log(
+  //   'height/width viewport',
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  //   // these client height and width here are not counting with the scroll bars. It's dusty dimensions of the view port, that are actually available for the content. And of course that excludes any scroll bars.
+  // );
 
   // Scrolling
   // window.scrollTo(
@@ -215,7 +215,7 @@ const loading = function (entries, observer) {
 const imgObserver = new IntersectionObserver(loading, {
   root: null,
   threshold: 0,
-  erootMargin: '200px',
+  rootMargin: '200px',
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
